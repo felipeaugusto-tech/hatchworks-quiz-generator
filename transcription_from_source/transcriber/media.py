@@ -6,7 +6,7 @@ from pathlib import Path
 
 from imageio_ffmpeg import get_ffmpeg_exe
 
-from transcriber import (
+from . import (
     CHUNK_SAFETY_FACTOR,
     MAX_UPLOAD_BYTES,
     MIN_CHUNK_SECONDS,

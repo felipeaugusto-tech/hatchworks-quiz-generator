@@ -1,0 +1,1 @@
+"""Transcription source package migrated from the original CLI project."""

@@ -5,15 +5,15 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-from transcriber import API_UPLOAD_LIMIT_BYTES, EXTENSIONS, MAX_UPLOAD_BYTES
-from transcriber.media import normalize_audio, resolve_ffmpeg_exe, split_audio
-from transcriber.openai_audio import (
+from . import API_UPLOAD_LIMIT_BYTES, EXTENSIONS, MAX_UPLOAD_BYTES
+from .media import normalize_audio, resolve_ffmpeg_exe, split_audio
+from .openai_audio import (
     build_client,
     serialize_result,
     transcribe_single_file,
     transcribe_verbose_chunk,
 )
-from transcriber.output import merge_verbose_transcripts, render_output, write_output
+from .output import merge_verbose_transcripts, render_output, write_output
 
 
 load_dotenv()

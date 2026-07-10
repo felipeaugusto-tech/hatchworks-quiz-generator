@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+sqlalchemy[asyncio]
+asyncpg
+alembic
+anthropic
+openai>=1.30.0
+imageio-ffmpeg>=0.5.1
+python-dotenv>=1.0.1
+python-multipart
+pydantic
+pydantic-settings
+httpx
