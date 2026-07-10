@@ -1,34 +1,49 @@
+# Backend
+
+## Local Development
+
+### Docker Compose
+
+Run from the repository root:
+
 ```bash
 docker compose up --build
 ```
 
-```bash
-python3 -m venv .venv
-```
+### Manual Python Run
 
-Activate it:
+Create and activate the backend virtual environment:
 
 ```bash
-source .venv/bin/activate
+python3 -m venv backend/.venv
+source backend/.venv/bin/activate
 ```
 
 ```powershell
-.\.venv\Scripts\Activate.ps1
-``` 
- 
-```
-pip install -r requirements.txt
+.\backend\.venv\Scripts\Activate.ps1
 ```
 
-```
-alembic -c alembic.ini upgrade head
+Install dependencies:
+
+```bash
+pip install -r backend/requirements.txt
 ```
 
-```
-uvicorn main:app --reload
+Run migrations from the repository root:
+
+```bash
+alembic -c backend/alembic.ini upgrade head
 ```
 
+Start the API from the repository root using the package path:
 
-## Useful URLs:
+```bash
+python -m uvicorn backend.main:app --reload
+```
+
+Do not use `uvicorn main:app --reload` from inside `backend/`; this monorepo expects package-qualified startup from the repository root.
+
+## Useful URLs
+
 - API: http://localhost:8000
 - Swagger docs: http://localhost:8000/docs

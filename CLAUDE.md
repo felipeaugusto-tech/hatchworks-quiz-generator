@@ -15,6 +15,19 @@ Full-stack quiz generator: upload a video, transcribe it, generate questions, an
 - `frontend/`
   - Next.js App Router frontend with upload, quiz, and results screens.
 
+## Python Startup Convention
+
+This monorepo contains more than one Python project. Always run Python applications from the repository root using package-qualified module paths.
+
+Canonical commands:
+
+- Backend:
+  - `python -m uvicorn backend.main:app --reload`
+- Transcription CLI:
+  - `python transcription_from_source/transcribe.py --help`
+
+Avoid folder-local startup commands such as `uvicorn main:app --reload` inside `backend/`.
+
 ## How to Run Locally
 
 ### Backend + Database

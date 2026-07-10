@@ -13,6 +13,19 @@ Full-stack quiz generator: upload a recording, transcribe it, generate multiple-
 - `docker-compose.yml`
   - Local PostgreSQL + backend runtime.
 
+## Python Startup Convention
+
+This repository contains multiple Python projects. To avoid import-path issues, always run Python apps from the repository root using package-qualified module paths.
+
+Examples:
+
+- Backend:
+  - `python -m uvicorn backend.main:app --reload`
+- Transcription CLI:
+  - `python transcription_from_source/transcribe.py --help`
+
+Do not rely on running `uvicorn main:app` from inside `backend/`.
+
 ## Local Development
 
 ### Backend + Database
