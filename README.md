@@ -1,4 +1,4 @@
-# Whisper POC (Python) - Simple Setup & Usage
+﻿# Whisper POC (Python) - Simple Setup & Usage
 
 This project is a proof of concept using OpenAI's Whisper model to transcribe audio files (like `.mp3`, `.m4a`, `.wav`, and `.mp4`) into text or subtitles.
 
@@ -58,7 +58,7 @@ The script:
 
 ## 6. Run a transcription
 ```bash
-python transcribe.py sample.m4a --language pt
+python transcribe.py <your-audio-file> --language pt
 ```
 
 For large video or audio files, use the same command shape:
@@ -70,7 +70,7 @@ python transcribe.py prompt_context_engineering_part1.mp4 --language pt
 Output appears in:
 
 ```text
-outputs/sample.txt
+outputs/<your-audio-file-stem>.txt
 ```
 
 ## 7. Optional flags
@@ -84,5 +84,5 @@ outputs/sample.txt
 Example:
 
 ```bash
-python transcribe.py sample.m4a --language pt --format srt --prompt "Olá, este é um teste de transcrição com Whisper."
+python transcribe.py <your-audio-file> --language pt --format srt --prompt "Olá, este é um teste de transcrição com Whisper."
 ```

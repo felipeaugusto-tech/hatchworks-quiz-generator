@@ -64,7 +64,7 @@ python transcribe.py --help
 Small file:
 
 ```powershell
-python transcribe.py sample.m4a --language pt
+python transcribe.py <your-audio-file> --language pt
 ```
 
 Large file:
@@ -76,7 +76,7 @@ python transcribe.py prompt_context_engineering_part1.mp4 --language pt
 Subtitle output:
 
 ```powershell
-python transcribe.py sample.m4a --language pt --format srt
+python transcribe.py <your-audio-file> --language pt --format srt
 ```
 
 Outputs are written to `outputs/` by default.
